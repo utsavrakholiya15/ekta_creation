@@ -1,0 +1,95 @@
+@import "../../../scss/main.scss";
+
+.dis-title {
+  margin-top: 40px;
+  p {
+    @include font1;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 100;
+  }
+}
+.dis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 70px !important;
+  margin-top: 50px !important;
+  @media (max-width:768px) {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .black-blur {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.156);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .dis-item {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    cursor: pointer;
+    .dis-item-data {
+      z-index: 9999;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      @include font1;
+      p {
+        margin-bottom: 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: 100;
+        letter-spacing: 5px;
+        @media (max-width:576px) {
+          font-size: 12px;
+        }
+        @media (max-width:420px) {
+          font-size: 11px;
+          letter-spacing: 4px;
+        }
+      }
+      h4 {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: white;
+        margin-bottom: 20px;
+        @media (max-width:576px) {
+          font-size: 22px;
+        }
+        @media (max-width:480px) {
+          font-size: 18px;
+        }
+        @media (max-width:420px) {
+          font-size: 15px;
+        }
+        @media (max-width:350px) {
+          font-size: 14px;
+        }
+      }
+      button {
+        @include font1;
+        margin-bottom: 50px;
+        background: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        @media (max-width:576px) {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+        @media (max-width:480px) {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+      }
+    }
+  }
+}

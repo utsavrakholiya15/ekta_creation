@@ -1,0 +1,157 @@
+@import "../../../scss/main.scss";
+.header-top {
+  width: 100%;
+  height: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.flex-left {
+  min-width: 60.5%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1156px) {
+    min-width: 61%;
+  }
+  @media (max-width: 1080px) {
+    min-width: 63%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.header-title {
+  h2 {
+    letter-spacing: 1.5px;
+    font-size: 27px;
+    font-weight: 500;
+    font-family: "Cinzel", serif;
+    span {
+      font-family: "Cinzel", serif;
+
+      font-weight: 700;
+    }
+    @media (max-width: 1156px) {
+      font-size: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 22 px;
+    }
+    @media (max-width: 1156px) {
+      font-size: 24px;
+    }
+  }
+}
+.header-icons {
+  display: flex;
+  gap: 18px;
+  margin-right: 20px;
+  .header-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.header-nav {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 27px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  nav {
+    display: flex;
+    gap: 40px;
+    padding: 9px;
+    p {
+      @include font1;
+      font-size: 14px;
+      letter-spacing: 3.7px;
+      font-weight: 300;
+      cursor: pointer;
+      position: relative;
+      transition: 0.3s ease-in-out;
+
+      &::before {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: black;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.header-bar {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+  .header-bar-svg {
+    // margin-right: -5px;
+    width: 30px;
+    height: 30px;
+  }
+}
+.bar-menu-parent {
+  width: 100%;
+  height: 100%;
+  background: #00000093;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  .bar-menu {
+    width: 350px;
+    height: 100%;
+    background: white;
+    padding: 80px 30px;
+    // text-align: center;
+    @include font1;
+    position: relative;
+    p {
+      border-bottom: 1px solid black;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.799);
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    .bar-menu-icons {
+      display: flex;
+      gap: 18px;
+      margin-right: 20px;
+      margin-top: 40px;
+      .header-icon {
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+      }
+    }
+    .close-bar-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

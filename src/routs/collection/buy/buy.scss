@@ -1,0 +1,71 @@
+@import "../../../scss/main.scss";
+
+.buy-grid {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 42% 1fr;
+  gap: 50px;
+}
+.buy-details {
+  @include font1;
+}
+.buy-details-name {
+  p {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: black;
+    text-transform: uppercase;
+  }
+}
+.buy-details-price {
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(79, 79, 79, 0.38);
+  padding-bottom: 50px;
+  margin-bottom: 45px;
+  p {
+    margin-top: 40px;
+    font-size: 16px;
+    color: rgba(128, 128, 128, 0.848) 000;
+  }
+  span {
+    display: block;
+    color: #000000dd;
+    font-weight: 100;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+.buy-details-size{
+    p{
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+    .size-div{
+        display: inline-block;
+        padding: 10px ;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: 15px;
+        border: 2px solid black;
+    }
+}
+.buy-details-buy{
+    margin-top: 30px;
+    button{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .button-wp{
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        border: none;
+        background: black;
+        color: white;
+        padding: 8px 30px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+}
