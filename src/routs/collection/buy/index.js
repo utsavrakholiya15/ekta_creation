@@ -39,6 +39,7 @@ export default function Buy() {
         setitem(found);
       })
       .catch((err) => console.error("Error fetching data:", err));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   //   setitem(itemTemp);
@@ -65,16 +66,16 @@ export default function Buy() {
             {/* <img className="img-full" src={item.image} /> */}
             <Slider className="silder" {...settings}>
               <div className="buy-img">
-                <img  className="img-full" src={item.image} />
+                <img className="img-full" src={item.image} />
               </div>
               <div className="buy-img">
-                <img  className="img-full" src={item.image1} />
+                <img className="img-full" src={item.image1} />
               </div>
               <div className="buy-img">
-                <img  className="img-full" src={item.image2} />
+                <img className="img-full" src={item.image2} />
               </div>
               <div className="buy-img">
-                <img  className="img-full" src={item.image3} />
+                <img className="img-full" src={item.image3} />
               </div>
             </Slider>
           </div>
@@ -90,11 +91,25 @@ export default function Buy() {
               <p>SIZE</p>
               <div className="size-div">REGULAR</div>
             </div>
-            <div className="buy-details-buy">
+            {/* <div className="buy-details-buy">
               <button>
                 <FaWhatsapp className="button-wp" />
                 BUY NOW
               </button>
+            </div> */}
+            <div className="buy-details-buy">
+              <a
+                href={`https://wa.me/+919274462615?text=${encodeURIComponent(
+                  `Hi, I'm interested in this saree:\n\nName: ${item.name}\nPrice: Rs.${item.price}\nImage: ${item.image}`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>
+                  <FaWhatsapp className="button-wp" />
+                  BUY NOW
+                </button>
+              </a>
             </div>
           </div>
         </div>

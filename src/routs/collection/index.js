@@ -10,10 +10,12 @@ export default function Collection() {
   const [items, setitems] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest')
-      .then(res => res.json())   // Parse JSON response
-      .then(data => setitems(data.record)) // Store it in state
-      .catch(err => console.error('Error fetching data:', err));
+    fetch("https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest")
+      .then((res) => res.json()) // Parse JSON response
+      .then((data) => setitems(data.record)) // Store it in state
+      .catch((err) => console.error("Error fetching data:", err));
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   // console.log("items***",items);
@@ -26,14 +28,7 @@ export default function Collection() {
       <div className="collection-partition">
         <div className="collection-categories">
           <div className="collection-categories-item">All</div>
-          <div
-            onClick={() => {
-              navigate("/collection/buy?id=1");
-            }}
-            className="collection-categories-item"
-          >
-            Women
-          </div>
+          <div className="collection-categories-item">Women</div>
           <div className="collection-categories-item">Kids</div>
         </div>
         <div className="collection-grid">
@@ -46,13 +41,13 @@ export default function Collection() {
                   className="collection-item"
                 >
                   <div className="collection-item-img">
-                    <img 
-                    className="img-full collection-image" 
-                    // src={el.image}
-                    src={hoveredIndex === i ? el.image1 : el.image}
-                    onMouseEnter={() => setHoveredIndex(i)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                     />
+                    <img
+                      className="img-full collection-image"
+                      // src={el.image}
+                      src={hoveredIndex === i ? el.image1 : el.image}
+                      onMouseEnter={() => setHoveredIndex(i)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    />
                   </div>
                   <div className="collection-item-data">
                     <p>{el.name}</p>
