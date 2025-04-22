@@ -5,6 +5,8 @@ import "./collection.scss";
 import { useNavigate } from "react-router-dom";
 export default function Collection() {
   const navigate = useNavigate();
+  const [hovered, setHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [items, setitems] = useState([]);
 
   useEffect(() => {
@@ -44,7 +46,13 @@ export default function Collection() {
                   className="collection-item"
                 >
                   <div className="collection-item-img">
-                    <img className="img-full" src={el.image} />
+                    <img 
+                    className="img-full collection-image" 
+                    // src={el.image}
+                    src={hoveredIndex === i ? el.image1 : el.image}
+                    onMouseEnter={() => setHoveredIndex(i)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                     />
                   </div>
                   <div className="collection-item-data">
                     <p>{el.name}</p>
