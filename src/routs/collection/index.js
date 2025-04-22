@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { itemsCollection } from "../../utilities/data/items";
-import img1 from "../../utilities/data/images/coll1.jpg";
+// import { itemsCollection } from "../../utilities/data/items";
+// import img1 from "../../utilities/data/images/coll1.jpg";
 import "./collection.scss";
 import { useNavigate } from "react-router-dom";
 export default function Collection() {

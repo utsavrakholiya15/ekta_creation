@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./buy.scss";
 import { useParams, useSearchParams } from "react-router-dom";
-import { itemsCollection } from "../../../utilities/data/items";
+// import { itemsCollection } from "../../../utilities/data/items";
 import { FaWhatsapp } from "react-icons/fa";
 export default function Buy() {
   const [queryParam] = useSearchParams();
