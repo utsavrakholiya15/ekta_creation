@@ -11,11 +11,22 @@ export default function Header() {
   const navigate = useNavigate();
   const [bar, setbar] = useState(false);
 
-  const phone = "+918849772129";
-  const message = "Hello,Ekta Creation👋";
-  const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(
-    message
-  )}`;
+  // const phone = "+919274462615";
+  // const message = "Hello,Ekta Creation👋";
+  // const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(
+  //   message
+  // )}`;
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "+919274462615"; 
+    const message = encodeURIComponent(
+      "Hi, I am interested in your services Ekta Creation👋!"
+    ); 
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(url, "_blank");
+    console.log("done");
+    
+  };
 
   return (
     <header className="container">
@@ -42,10 +53,10 @@ export default function Header() {
               </p>
               <p>ABOUT US</p>
               <div className="bar-menu-icons">
-                <a href="tel:+918849772129">
+                <a href="tel:+919274462615">
                   <MdOutlinePhone className="phone header-icon" />
                 </a>
-                <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+                <a onClick={handleWhatsAppClick} target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="whatsapp header-icon" />
                 </a>
                 <a
@@ -74,10 +85,10 @@ export default function Header() {
             </h2>
           </div>
           <div className="header-icons">
-            <a href="tel:+918849772129">
+            <a href="tel:+919274462615">
               <MdOutlinePhone className="phone header-icon" />
             </a>
-            <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+            <a onClick={handleWhatsAppClick} target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="whatsapp header-icon" />
             </a>
             <a

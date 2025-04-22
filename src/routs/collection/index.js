@@ -5,9 +5,16 @@ import "./collection.scss";
 import { useNavigate } from "react-router-dom";
 export default function Collection() {
   const navigate = useNavigate();
-  const [items, setitems] = useState(itemsCollection);
+  const [items, setitems] = useState([]);
 
-  // console.log(items);
+  useEffect(() => {
+    fetch('https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest')
+      .then(res => res.json())   // Parse JSON response
+      .then(data => setitems(data.record)) // Store it in state
+      .catch(err => console.error('Error fetching data:', err));
+  }, []);
+
+  // console.log("items***",items);
 
   return (
     <div className="collection container">
@@ -32,12 +39,12 @@ export default function Collection() {
             items.map((el, i) => {
               return (
                 <div
-                  onClick={() => navigate(`/collection/buy?id=${i}`)}
+                  onClick={() => navigate(`/collection/buy?id=${el.id}`)}
                   key={i}
                   className="collection-item"
                 >
                   <div className="collection-item-img">
-                    <img className="img-full" src={el.img} />
+                    <img className="img-full" src={el.image} />
                   </div>
                   <div className="collection-item-data">
                     <p>{el.name}</p>

@@ -10,17 +10,49 @@
     letter-spacing: 2.2px;
     font-weight: 300;
     text-transform: uppercase;
+    @media (max-width: 1156px) {
+      font-size: 27px;
+    }
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media (max-width: 576px) {
+      font-size: 21px;
+    }
   }
 }
 .collection-partition {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 250px 1fr;
   gap: 20px;
+
+  @media (max-width: 1156px) {
+    grid-template-columns: 1fr;
+  }
 }
 .collection-categories {
   //   border: 1px solid red;
   text-align: center;
   padding: 25px 30px;
+  @media (max-width: 1156px) {
+    // padding: 20px 25px;
+    padding: 0;
+    width: 500px;
+    display: flex;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    width: 380px;
+  }
+  @media (max-width: 576px) {
+    width: 320px;
+  }
+  @media (max-width: 480px) {
+    width: 280px;
+  }
+  @media (max-width: 420px) {
+    width: 240px;
+  }
   .collection-categories-item {
     @include font1;
     border-bottom: 1px solid rgba(128, 128, 128, 0.594);
@@ -32,23 +64,57 @@
     letter-spacing: 2px;
     color: rgb(83, 83, 83);
     cursor: pointer;
+    @media (max-width: 1156px) {
+      width: 100%;
+    }
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+    @media (max-width: 48px) {
+      font-size: 13px;
+    }
   }
 
   .collection-categories-item:first-child {
-    border-radius: 9px;
-    background: rgba(128, 128, 128, 0.192);
-    border-bottom: 0;
+    // border-radius: 9px;
+    // background: rgba(128, 128, 128, 0.192);
+    border-bottom: 2px solid black;
+    color: black;
   }
 }
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  @media (max-width: 1020px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .collection-item {
     cursor: pointer;
     .collection-item-img {
       width: 100%;
       height: 330px;
+      @media (max-width: 1156px) {
+        height: 380px;
+      }
+      @media (max-width: 768px) {
+        height: 280px;
+      }
+      @media (max-width: 576px) {
+        height: 380px;
+      }
+      @media (max-width: 480px) {
+        height: 350px;
+      }
+      @media (max-width: 420px) {
+        height: 300px;
+      }
+      @media (max-width: 350px) {
+        height: 260px;
+      }
     }
     .collection-item-data {
       text-align: center;

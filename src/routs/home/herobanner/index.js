@@ -49,10 +49,13 @@ export default function HeroBanner() {
             <img className="img-full" src={heroImg1} />
           </div>
           <div className="hb-img">
-            <img className="img-full" src={hero1} />
+            <img className="img-full" src={heroImg1} />
           </div>
           <div className="hb-img">
-            <img className="img-full" src={hero3} />
+            <img className="img-full" src={heroImg1} />
+          </div>
+          <div className="hb-img">
+            <img className="img-full" src={heroImg1} />
           </div>
         </Slider>
       </div>

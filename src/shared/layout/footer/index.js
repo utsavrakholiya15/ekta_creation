@@ -6,9 +6,9 @@ import { MdOutlineMail } from "react-icons/md";
 
 export default function Footer() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+918849772129"; // replace with your number
+    const phoneNumber = "+919274462615"; // replace with your number
     const message = encodeURIComponent(
-      "Hi, I am interested in your services Alok Rakholiya!"
+      "Hi, I am interested in your services Ekta Creation👋!"
     ); // customize your message
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="footer">
         <div className="footer-left">
           <h4>CONTACT US</h4>
-          <p>
+          <p href="tel:+919274462615">
             <span>
               <MdOutlinePhone />
             </span>
