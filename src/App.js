@@ -9,6 +9,7 @@ import Collection from "./routs/collection";
 import Layout from "./shared/layout";
 import Buy from "./routs/collection/buy";
 import { useEffect, useState } from "react";
+import About from "./routs/about";
 
 function App() {
   // const [products, setProducts] = useState([]);
@@ -21,7 +22,7 @@ function App() {
   //     .catch(err => console.error('Error fetching data:', err));
   // }, []);
   // console.log(products);
-  
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -38,6 +39,10 @@ function App() {
         {
           path: "/collection/buy",
           element: <Buy />,
+        },
+        {
+          path: "/about",
+          element: <About />,
         },
       ],
     },

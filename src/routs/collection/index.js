@@ -32,7 +32,7 @@ export default function Collection() {
           <div className="collection-categories-item">Kids</div>
         </div>
         <div className="collection-grid">
-          {items.length > 0 ? (
+          {items.length > 0? (
             items.map((el, i) => {
               return (
                 <div
@@ -57,14 +57,17 @@ export default function Collection() {
               );
             })
           ) : (
-            <div
-              style={{
-                fontSize: "21px",
-                textTransform: "uppercase",
-                textAlign: "center",
-              }}
-            >
-              No items found
+            // <div
+            //   style={{
+            //     fontSize: "21px",
+            //     textTransform: "uppercase",
+            //     textAlign: "center",
+            //   }}
+            // >
+            //   No items found
+            // </div>
+            <div className="collection-loader">
+              <span className="loader"></span>
             </div>
           )}
           {/* -- */}

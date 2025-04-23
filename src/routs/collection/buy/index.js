@@ -43,7 +43,7 @@ export default function Buy() {
   }, []);
 
   //   setitem(itemTemp);
-  //   console.log("***", item.id);
+    console.log("***", item);
   var settings = {
     dots: true,
     infinite: true,
@@ -59,7 +59,7 @@ export default function Buy() {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="buy container-big">
+    <div className="container-big buy">
       {item ? (
         <div className="buy-grid container">
           <div className="buy-sliders">
@@ -89,7 +89,7 @@ export default function Buy() {
             </div>
             <div className="buy-details-size">
               <p>SIZE</p>
-              <div className="size-div">REGULAR</div>
+              <div className="size-div">FREE</div>
             </div>
             {/* <div className="buy-details-buy">
               <button>
@@ -110,6 +110,9 @@ export default function Buy() {
                   BUY NOW
                 </button>
               </a>
+            </div>
+            <div className="buy-desc">
+              <p>{item.description}</p>
             </div>
           </div>
         </div>

@@ -17,15 +17,14 @@ export default function Header() {
   //   message
   // )}`;
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+919274462615"; 
+    const phoneNumber = "+919274462615";
     const message = encodeURIComponent(
       "Hi, I am interested in your services Ekta Creation👋!"
-    ); 
+    );
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(url, "_blank");
     console.log("done");
-    
   };
 
   return (
@@ -40,6 +39,7 @@ export default function Header() {
               <p
                 onClick={() => {
                   navigate("/");
+                  setbar(false);
                 }}
               >
                 HOME
@@ -47,16 +47,28 @@ export default function Header() {
               <p
                 onClick={() => {
                   navigate("/collection");
+                  setbar(false);
                 }}
               >
                 COLLECTION
               </p>
-              <p>ABOUT US</p>
+              <p
+                onClick={() => {
+                  navigate("/about");
+                  setbar(false);
+                }}
+              >
+                ABOUT US
+              </p>
               <div className="bar-menu-icons">
                 <a href="tel:+919274462615">
                   <MdOutlinePhone className="phone header-icon" />
                 </a>
-                <a onClick={handleWhatsAppClick} target="_blank" rel="noopener noreferrer">
+                <a
+                  onClick={handleWhatsAppClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaWhatsapp className="whatsapp header-icon" />
                 </a>
                 <a
@@ -88,7 +100,11 @@ export default function Header() {
             <a href="tel:+919274462615">
               <MdOutlinePhone className="phone header-icon" />
             </a>
-            <a onClick={handleWhatsAppClick} target="_blank" rel="noopener noreferrer">
+            <a
+              onClick={handleWhatsAppClick}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp className="whatsapp header-icon" />
             </a>
             <a
@@ -117,7 +133,13 @@ export default function Header() {
           >
             COLLECTION
           </p>
-          <p>ABOUT US</p>
+          <p
+            onClick={() => {
+              navigate("/about");
+            }}
+          >
+            ABOUT US
+          </p>
         </nav>
       </div>
     </header>
