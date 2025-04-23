@@ -59,7 +59,7 @@
     padding: 10px;
     font-size: 10px;
     letter-spacing: 2px;
-    margin-top: 15px;
+    margin-top: 10px;
     border: 2px solid black;
     @media (max-width:576px) {
       padding: 7px;
@@ -68,7 +68,8 @@
   }
 }
 .buy-details-buy {
-  margin-top: 18px;
+  margin-top: 28px;
+  display: inline-block;
   button {
     display: flex;
     align-items: center;
@@ -114,14 +115,22 @@
 }
 
 
-.buy-desc {
+.buy-pDetails{
   @include font1;
+  margin-top: 52px;
+  h3{
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
   p {
-    font-size: 13px;
-    margin-top: 40px;
-    letter-spacing: 1.3px;
-    line-height: 18px;
+    font-size: 14px;
+    letter-spacing: 1.8px;
+    line-height: 25px;
     color: rgba(0, 0, 0, 0.781);
+    font-weight: 300;
     @media (max-width:576px) {
       font-size: 12px;
     }

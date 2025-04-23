@@ -2,23 +2,38 @@ import React, { useEffect, useState } from "react";
 // import { itemsCollection } from "../../utilities/data/items";
 // import img1 from "../../utilities/data/images/coll1.jpg";
 import "./collection.scss";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 export default function Collection() {
   const navigate = useNavigate();
+  const [queryParams] = useSearchParams();
+  const location = useLocation();
+  //
   const [hovered, setHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [items, setitems] = useState([]);
+  //
 
+  const category = queryParams.get("category");
   useEffect(() => {
     fetch("https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest")
       .then((res) => res.json()) // Parse JSON response
-      .then((data) => setitems(data.record)) // Store it in state
+      // .then((data) => setitems(data.record)) // Store it in state
+      .then((data) => {
+        if (category) {
+          const filtered = data.record.filter((el) => el.category === category);
+          setitems(filtered);
+        } else {
+          setitems(data.record);
+        }
+      })
       .catch((err) => console.error("Error fetching data:", err));
 
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  }, [location.search]);
 
   // console.log("items***",items);
+  if (category == "women") {
+  }
 
   return (
     <div className="collection container">
@@ -27,12 +42,39 @@ export default function Collection() {
       </div>
       <div className="collection-partition">
         <div className="collection-categories">
-          <div className="collection-categories-item">All</div>
-          <div className="collection-categories-item">Women</div>
-          <div className="collection-categories-item">Kids</div>
+          <div
+            onClick={() => navigate("/collection")}
+            className={
+              category == null
+                ? "collection-categories-item categories-item-active"
+                : "collection-categories-item"
+            }
+          >
+            All
+          </div>
+          <div
+            onClick={() => navigate("/collection?category=women")}
+            className={
+              category == "women"
+                ? "collection-categories-item categories-item-active"
+                : "collection-categories-item"
+            }
+          >
+            Women
+          </div>
+          <div
+            onClick={() => navigate("/collection?category=kids")}
+            className={
+              category == "kids"
+                ? "collection-categories-item categories-item-active"
+                : "collection-categories-item"
+            }
+          >
+            Kids
+          </div>
         </div>
         <div className="collection-grid">
-          {items.length > 0? (
+          {items.length > 0 ? (
             items.map((el, i) => {
               return (
                 <div

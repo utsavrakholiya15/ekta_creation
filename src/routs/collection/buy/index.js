@@ -43,7 +43,7 @@ export default function Buy() {
   }, []);
 
   //   setitem(itemTemp);
-    console.log("***", item);
+  console.log("***", item);
   var settings = {
     dots: true,
     infinite: true,
@@ -111,8 +111,16 @@ export default function Buy() {
                 </button>
               </a>
             </div>
-            <div className="buy-desc">
-              <p>{item.description}</p>
+            <div className="buy-pDetails">
+              <h3>Product Details</h3>
+              <p>Name : Value</p>
+              <p>Saree Fabric : Value</p>
+              <p>Blouse Fabric : Value</p>
+              <p>Pallu : Value</p>
+              <p>Occasion : Value</p>
+              <p>Pattern : Value</p>
+              <p>{"Net Quantity (N) : Single"}</p>
+              <p>Sizes : Free Size</p>
             </div>
           </div>
         </div>
