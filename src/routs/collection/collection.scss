@@ -35,8 +35,7 @@
 }
 .collection-categories {
   //   border: 1px solid red;
-  text-align: center;
-  padding: 25px 30px;
+  padding: 0 25px 30px;
   @media (max-width: 1156px) {
     // padding: 20px 25px;
     padding: 0;
@@ -45,36 +44,68 @@
     margin: 0 auto;
   }
   @media (max-width: 768px) {
-    width: 380px;
+    text-align: center;
+    width: 480px;
   }
   @media (max-width: 576px) {
-    width: 320px;
+    width: 430px;
   }
   @media (max-width: 480px) {
-    width: 280px;
+    width: 370px;
   }
   @media (max-width: 420px) {
-    width: 240px;
+    width: 300px;
+  }
+  @media (max-width: 360px) {
+    width: 270px;
   }
   .collection-categories-item {
     @include font1;
     border-bottom: 1px solid rgba(128, 128, 128, 0.594);
     // margin-bottom: 18px;
     // padding: 10px;
-    padding-block: 24px;
-    font-size: 16px;
+    padding-block: 18px;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: rgb(83, 83, 83);
+    text-transform: uppercase;
     cursor: pointer;
+    transition: .3s ease-in-out;
+    position: relative;
+    &:hover{
+      &::before{width: 100%;}
+    }
+    &::before{
+      transition: .3s ease-in-out;
+      content: "";
+      position: absolute;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: black;
+    }
     @media (max-width: 1156px) {
       width: 100%;
     }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       font-size: 14px;
+      letter-spacing: 2px;
     }
-    @media (max-width: 48px) {
-      font-size: 13px;
+    @media (max-width: 576px) {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+    @media (max-width: 480px) {
+      font-size: 12px;
+      letter-spacing: 0;
+    }
+    @media (max-width: 420px) {
+      font-size: 11px;
+    }
+    @media (max-width: 360px) {
+      font-size: 10px;
     }
   }
 
@@ -83,6 +114,9 @@
     // background: rgba(128, 128, 128, 0.192);
     border-bottom: 2px solid black;
     color: black;
+    &::before{
+      content: none;
+    }
   }
 }
 .collection-grid {
