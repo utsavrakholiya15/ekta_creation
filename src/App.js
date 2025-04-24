@@ -1,28 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./scss/main.scss";
-import Header from "./shared/layout/header";
-import Footer from "./shared/layout/footer";
-import Home from "./routs/home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Collection from "./routs/collection";
+import React, { Suspense, useEffect, useState } from "react";
+import { Loader } from "./routs/common";
+
+// import Home from "./routs/home";
+// import Collection from "./routs/collection";
+// import Buy from "./routs/collection/buy";
 import Layout from "./shared/layout";
-import Buy from "./routs/collection/buy";
-import { useEffect, useState } from "react";
-import About from "./routs/about";
+// import About from "./routs/about";
+const Home = React.lazy(() => import("./routs/home"));
+const Collection = React.lazy(() => import("./routs/collection"));
+const Buy = React.lazy(() => import("./routs/collection/buy"));
+const About = React.lazy(() => import("./routs/about"));
 
 function App() {
-  // const [products, setProducts] = useState([]);
-
-  // Fetch data on component mount
-  // useEffect(() => {
-  //   fetch('https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest')
-  //     .then(res => res.json())   // Parse JSON response
-  //     .then(data => setProducts(data.record)) // Store it in state
-  //     .catch(err => console.error('Error fetching data:', err));
-  // }, []);
-  // console.log(products);
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -30,19 +23,36 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />,
+          element: (
+            <Suspense fallback={<Loader />}>
+              <Home />
+            </Suspense>
+          ),
         },
         {
           path: "/collection",
-          element: <Collection />,
+          element: (
+            <Suspense fallback={null}>
+              {/* No fallback needed */}
+              <Collection />
+            </Suspense>
+          ),
         },
         {
           path: "/collection/buy",
-          element: <Buy />,
+          element: (
+            <Suspense fallback={<Loader />}>
+              <Buy />
+            </Suspense>
+          ),
         },
         {
           path: "/about",
-          element: <About />,
+          element: (
+            <Suspense fallback={<Loader />}>
+              <About />
+            </Suspense>
+          ),
         },
       ],
     },
