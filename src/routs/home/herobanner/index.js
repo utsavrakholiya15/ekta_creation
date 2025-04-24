@@ -36,7 +36,7 @@ export default function HeroBanner() {
     fade: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: false,
     waitForAnimate: false,
@@ -47,6 +47,12 @@ export default function HeroBanner() {
         <Slider {...settings}>
           <div className="hb-img">
             <img loading="lazy" className="img-full" src={heroImg1} />
+            <div className="hb-img-blur"></div>
+            <div className="hb-img-data">
+              <h4>ETHICAL AND BEAUTIFUL COLLECTION</h4>
+              <p>a saree is not just a garment, it's a language of grace, elegance, and timeless tradition</p>
+              <button>EXPLORE</button>
+            </div>
           </div>
           <div className="hb-img">
             <img loading="lazy" className="img-full" src={heroImg1} />

@@ -15,8 +15,8 @@
   gap: 40px;
   margin-bottom: 70px !important;
   margin-top: 50px !important;
-  @media (max-width:768px) {
-    grid-template-columns: repeat(1,1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
   }
   .black-blur {
     width: 100%;
@@ -31,6 +31,13 @@
     height: 700px;
     position: relative;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      height: 630px;
+    }
+    @media (max-width: 768px) {
+      height: 510px;
+    }
     .dis-item-data {
       z-index: 9999;
       position: absolute;
@@ -45,10 +52,10 @@
         font-size: 14px;
         font-weight: 100;
         letter-spacing: 5px;
-        @media (max-width:576px) {
+        @media (max-width: 576px) {
           font-size: 12px;
         }
-        @media (max-width:420px) {
+        @media (max-width: 420px) {
           font-size: 11px;
           letter-spacing: 4px;
         }
@@ -59,16 +66,16 @@
         letter-spacing: 2px;
         color: white;
         margin-bottom: 20px;
-        @media (max-width:576px) {
+        @media (max-width: 576px) {
           font-size: 22px;
         }
-        @media (max-width:480px) {
+        @media (max-width: 480px) {
           font-size: 18px;
         }
-        @media (max-width:420px) {
+        @media (max-width: 420px) {
           font-size: 15px;
         }
-        @media (max-width:350px) {
+        @media (max-width: 350px) {
           font-size: 14px;
         }
       }
@@ -81,11 +88,11 @@
         font-size: 15px;
         font-weight: 600;
         letter-spacing: 3px;
-        @media (max-width:576px) {
+        @media (max-width: 576px) {
           font-size: 14px;
           padding: 8px 16px;
         }
-        @media (max-width:480px) {
+        @media (max-width: 480px) {
           font-size: 14px;
           padding: 8px 12px;
         }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Marquee from "react-fast-marquee";
 import "./header.scss";
 import { CiInstagram } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
@@ -28,8 +29,15 @@ export default function Header() {
   };
 
   return (
-    <header className="container">
-      <div className="header-top">
+    <header className="">
+      <div className="header-marquee">
+        <Marquee speed={60} autoFill={true}>
+          <div className="header-marquee-item">
+            <p>FREE SHIPPING | PAN INDIA | NO COD</p>
+          </div>
+        </Marquee>
+      </div>
+      <div className="header-top container">
         <div onClick={() => setbar((pre) => !pre)} className="header-bar">
           <LiaBarsSolid className="header-bar-svg" />
         </div>

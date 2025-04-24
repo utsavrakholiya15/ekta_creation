@@ -1,6 +1,7 @@
 import React from "react";
 import "./gallery.scss";
-import gal1 from "../../../assets/IMAGEs/gallery1.jpg";
+import gal1 from "../../../assets/IMAGEs/gallery2.jpg";
+import gal2 from "../../../assets/IMAGEs/gallery3.jpg";
 export default function Gallery() {
   return (
     <div className="gal container-45">
@@ -21,7 +22,7 @@ export default function Gallery() {
             <p>“Today, if I feel there is no dream too big to dream, it is because of the knowledge that our craftsmen can bring it to life. It is the artisan that allows me the confidence to see the world as I do, to dream, to create”</p>
         </div>
         <div className="gal-img item2">
-          <img className="img-full" src={gal1} />
+          <img className="img-full" src={gal2} />
         </div>
       </div>
     </div>

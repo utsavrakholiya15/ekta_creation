@@ -32,8 +32,7 @@ export default function Collection() {
   }, [location.search]);
 
   // console.log("items***",items);
-  if (category == "women") {
-  }
+  
 
   return (
     <div className="collection container">
@@ -53,24 +52,54 @@ export default function Collection() {
             All
           </div>
           <div
-            onClick={() => navigate("/collection?category=women")}
+            onClick={() => navigate("/collection?category=lycra")}
             className={
-              category == "women"
+              category == "lycra"
                 ? "collection-categories-item categories-item-active"
                 : "collection-categories-item"
             }
           >
-            Women
+            Lycra
           </div>
           <div
-            onClick={() => navigate("/collection?category=kids")}
+            onClick={() => navigate("/collection?category=rimzim")}
             className={
-              category == "kids"
+              category == "rimzim"
                 ? "collection-categories-item categories-item-active"
                 : "collection-categories-item"
             }
           >
-            Kids
+            Rimzim
+          </div>
+          <div
+            onClick={() => navigate("/collection?category=chinon")}
+            className={
+              category == "chinon"
+                ? "collection-categories-item categories-item-active"
+                : "collection-categories-item"
+            }
+          >
+            Chinon
+          </div>
+          <div
+            onClick={() => navigate("/collection?category=satin")}
+            className={
+              category == "satin"
+                ? "collection-categories-item categories-item-active"
+                : "collection-categories-item"
+            }
+          >
+            Satin
+          </div>
+          <div
+            onClick={() => navigate("/collection?category=georgette")}
+            className={
+              category == "georgette"
+                ? "collection-categories-item categories-item-active"
+                : "collection-categories-item"
+            }
+          >
+            Georgette
           </div>
         </div>
         <div className="collection-grid">
@@ -99,15 +128,6 @@ export default function Collection() {
               );
             })
           ) : (
-            // <div
-            //   style={{
-            //     fontSize: "21px",
-            //     textTransform: "uppercase",
-            //     textAlign: "center",
-            //   }}
-            // >
-            //   No items found
-            // </div>
             <div className="collection-loader">
               <span className="loader"></span>
             </div>

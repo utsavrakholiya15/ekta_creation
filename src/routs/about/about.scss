@@ -1,2 +1,20 @@
 @import "../../scss/main.scss";
 
+.about-title{
+  h2{
+    font-size: 31px;
+    color: rgba(51, 51, 51, 0.856);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+  }
+}
+.about-data{
+  p{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(50, 50, 50);
+    margin-bottom: 30px;
+    letter-spacing: 1.4px;
+  }
+}

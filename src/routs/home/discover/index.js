@@ -1,6 +1,7 @@
 import React from "react";
 import "./discover.scss";
-import dis1 from "../../../assets/IMAGEs/dis1.jpg";
+import dis1 from "../../../assets/IMAGEs/dis2.jpg";
+import dis2 from "../../../assets/IMAGEs/dis2.webp";
 export default function Discover() {
   return (
     <div className="dis container-45">
@@ -19,7 +20,7 @@ export default function Discover() {
           </div>
         </div>
         <div className="dis-item">
-          <img className="img-full" src={dis1} />
+          <img className="img-full" src={dis2} />
           <div className="black-blur"></div>
           <div className="dis-item-data">
             <p>SPRING SUMMER 2025</p>
