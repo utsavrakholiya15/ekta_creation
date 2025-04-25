@@ -71,7 +71,6 @@
     color: rgb(83, 83, 83);
     text-transform: uppercase;
     cursor: pointer;
-    transition: .3s ease-in-out;
     position: relative;
     &:hover{
       &::before{width: 100%;}
