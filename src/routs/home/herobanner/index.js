@@ -7,6 +7,7 @@ import { FiChevronRight } from "react-icons/fi";
 import heroImg1 from "../../../assets/IMAGEs/heroImg1.png";
 import heroImg2 from "../../../assets/IMAGEs/hero2.jpg";
 import heroImg3 from "../../../assets/IMAGEs/hero3.jpg";
+import heroImg4 from "../../../assets/IMAGEs/hero4.jpg";
 import Slider from "react-slick";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -45,22 +46,25 @@ export default function HeroBanner() {
       <div className="hb-sliders">
         <Slider {...settings}>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
+            <img loading="lazy" className="img-full" src={heroImg1} alt="" />
             <div className="hb-img-blur"></div>
             <div className="hb-img-data">
               <h4>ETHICAL AND BEAUTIFUL COLLECTION</h4>
-              <p>a saree is not just a garment, it's a language of grace, elegance, and timeless tradition</p>
+              <p>
+                a saree is not just a garment, it's a language of grace,
+                elegance, and timeless tradition
+              </p>
               <button>EXPLORE</button>
             </div>
           </div>
-          <div className="hb-img hb-img1">
-            <img loading="lazy" className="img-full" src={heroImg2} alt=""/>
-          </div>
-          <div className="hb-img hb-img1">
-            <img loading="lazy" className="img-full" src={heroImg3} alt=""/>
+          <div className="hb-img">
+            <img loading="lazy" className="img-full" src={heroImg2} alt="" />
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
+            <img loading="lazy" className="img-full" src={heroImg3} alt="" />
+          </div>
+          <div className="hb-img">
+            <img loading="lazy" className="img-full" src={heroImg4} alt="" />
           </div>
         </Slider>
       </div>

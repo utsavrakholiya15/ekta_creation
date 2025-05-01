@@ -15,7 +15,7 @@ export default function Collection() {
 
   const category = queryParams.get("category");
   useEffect(() => {
-    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/72c46ff359af0dcc4d348727da69307ced76489c/ec.json")
+    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/05b58e8cf7211c003cb5952a24115ae361d6bf45/ec.json")
       .then((res) => res.json()) // Parse JSON response
       // .then((data) => setitems(data)) // Store it in state
       .then((data) => {
@@ -31,7 +31,7 @@ export default function Collection() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.search]);
 
-  // console.log("items***",items);
+  console.log("items***",items);
   
 
   return (
@@ -115,7 +115,7 @@ export default function Collection() {
                     <img
                       className="img-full collection-image"
                       // src={el.image}
-                      src={hoveredIndex === i ? el.image1 : el.image}
+                      src={hoveredIndex === i ? el.image2 : el.image1}
                       onMouseEnter={() => setHoveredIndex(i)}
                       onMouseLeave={() => setHoveredIndex(null)}
                       alt=""

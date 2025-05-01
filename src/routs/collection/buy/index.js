@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./buy.scss";
 import { useParams, useSearchParams } from "react-router-dom";
-// import { itemsCollection } from "../../../utilities/data/items";
 import { FaWhatsapp } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FiChevronRight } from "react-icons/fi";
 function SampleNextArrow(props) {
@@ -32,10 +33,10 @@ export default function Buy() {
   const [item, setitem] = useState({});
 
   useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest")
+    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/05b58e8cf7211c003cb5952a24115ae361d6bf45/ec.json")
       .then((res) => res.json())
       .then((data) => {
-        const found = data.record.find((item) => item.id === id);
+        const found = data.find((item) => item.id === id);
         setitem(found);
       })
       .catch((err) => console.error("Error fetching data:", err));
@@ -43,15 +44,15 @@ export default function Buy() {
   }, []);
 
   //   setitem(itemTemp);
-  // console.log("***", item);
+  console.log("***", item);
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
-    autoplay: true,
+    fade: false,
+    autoplay: false,
     autoplaySpeed: 4000,
     pauseOnHover: false,
     waitForAnimate: false,
@@ -64,18 +65,18 @@ export default function Buy() {
         <div className="buy-grid container">
           <div className="buy-sliders">
             {/* <img className="img-full" src={item.image} /> */}
-            <Slider className="silder" {...settings}>
-              <div className="buy-img">
-                <img className="img-full" src={item.image} alt="" />
-              </div>
+            <Slider className="slider" {...settings}>
               <div className="buy-img">
                 <img className="img-full" src={item.image1} alt="" />
               </div>
               <div className="buy-img">
-                <img className="img-full" src={item.image2} alt=""/>
+                <img className="img-full" src={item.image2} alt="" />
               </div>
               <div className="buy-img">
                 <img className="img-full" src={item.image3} alt=""/>
+              </div>
+              <div className="buy-img">
+                <img className="img-full" src={item.image4} alt=""/>
               </div>
             </Slider>
           </div>

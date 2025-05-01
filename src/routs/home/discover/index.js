@@ -11,7 +11,7 @@ export default function Discover() {
       </div>
       <div className="dis-grid">
         <div className="dis-item">
-          <img className="img-full" src={dis1} alt=""/>
+          <img className="img-full" src={dis1} alt="" />
           <div className="black-blur"></div>
           <div className="dis-item-data">
             <p>SPRING SUMMER 2025</p>
@@ -20,7 +20,7 @@ export default function Discover() {
           </div>
         </div>
         <div className="dis-item">
-          <img className="img-full" src={dis2} alt=""/>
+          <img className="img-full" src={dis2} alt="" />
           <div className="black-blur"></div>
           <div className="dis-item-data">
             <p>SPRING SUMMER 2025</p>
