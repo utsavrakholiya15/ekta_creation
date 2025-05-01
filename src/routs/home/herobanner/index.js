@@ -4,10 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronRight } from "react-icons/fi";
 
-import hero1 from "../../../assets/IMAGEs/hero1.webp";
-import hero2 from "../../../assets/IMAGEs/hero2.jpg";
-import hero3 from "../../../assets/IMAGEs/hero3.webp";
 import heroImg1 from "../../../assets/IMAGEs/heroImg1.png";
+import heroImg2 from "../../../assets/IMAGEs/hero2.jpg";
+import heroImg3 from "../../../assets/IMAGEs/hero3.jpg";
 import Slider from "react-slick";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -54,11 +53,11 @@ export default function HeroBanner() {
               <button>EXPLORE</button>
             </div>
           </div>
-          <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
+          <div className="hb-img hb-img1">
+            <img loading="lazy" className="img-full" src={heroImg2} alt=""/>
           </div>
-          <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
+          <div className="hb-img hb-img1">
+            <img loading="lazy" className="img-full" src={heroImg3} alt=""/>
           </div>
           <div className="hb-img">
             <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
