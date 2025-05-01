@@ -15,15 +15,15 @@ export default function Collection() {
 
   const category = queryParams.get("category");
   useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/6807652b8561e97a5004ea22/latest")
+    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/72c46ff359af0dcc4d348727da69307ced76489c/ec.json")
       .then((res) => res.json()) // Parse JSON response
-      // .then((data) => setitems(data.record)) // Store it in state
+      // .then((data) => setitems(data)) // Store it in state
       .then((data) => {
         if (category) {
-          const filtered = data.record.filter((el) => el.category === category);
+          const filtered = data.filter((el) => el.category === category);
           setitems(filtered);
         } else {
-          setitems(data.record);
+          setitems(data);
         }
       })
       .catch((err) => console.error("Error fetching data:", err));
@@ -118,6 +118,7 @@ export default function Collection() {
                       src={hoveredIndex === i ? el.image1 : el.image}
                       onMouseEnter={() => setHoveredIndex(i)}
                       onMouseLeave={() => setHoveredIndex(null)}
+                      alt=""
                     />
                   </div>
                   <div className="collection-item-data">

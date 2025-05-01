@@ -7,7 +7,7 @@ export default function Gallery() {
     <div className="gal container-45">
       <div className="gal-item">
         <div className="gal-img">
-          <img className="img-full" src={gal1} />
+          <img className="img-full" src={gal1} alt=""/>
         </div>
         <div className="gal-data">
             <span>RAHUL MISHRA</span>
@@ -22,7 +22,7 @@ export default function Gallery() {
             <p>“Today, if I feel there is no dream too big to dream, it is because of the knowledge that our craftsmen can bring it to life. It is the artisan that allows me the confidence to see the world as I do, to dream, to create”</p>
         </div>
         <div className="gal-img item2">
-          <img className="img-full" src={gal2} />
+          <img className="img-full" src={gal2} alt=""/>
         </div>
       </div>
     </div>

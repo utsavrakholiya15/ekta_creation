@@ -46,7 +46,7 @@ export default function HeroBanner() {
       <div className="hb-sliders">
         <Slider {...settings}>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} />
+            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
             <div className="hb-img-blur"></div>
             <div className="hb-img-data">
               <h4>ETHICAL AND BEAUTIFUL COLLECTION</h4>
@@ -55,13 +55,13 @@ export default function HeroBanner() {
             </div>
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} />
+            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} />
+            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} />
+            <img loading="lazy" className="img-full" src={heroImg1} alt=""/>
           </div>
         </Slider>
       </div>

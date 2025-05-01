@@ -16,16 +16,44 @@
 footer {
   overflow: hidden;
   // border-top: 1px solid black;
+  margin-top: 30px;
 }
 .footer {
   width: 100%;
-  // min-height: 200px;
-  padding: 40px 30px;
-  display: flex;
-  justify-content: center;
-  gap: 100px;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
-.footer-left {
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .footer-logo-img {
+    width: 75px;
+    height: 75px;
+  }
+  .footer-logo-name {
+    @include font1;
+    margin-top: 15px;
+    p {
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      color: rgb(70, 70, 70);
+      font-weight: normal;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+.footer-links{
+  gap: 4px;
+}
+.footer-products{
+  gap: 4px;
+}
+.footer-item {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -46,11 +74,11 @@ footer {
     align-items: center;
     gap: 6px;
     letter-spacing: 1.2px;
-    &:hover{
+    &:hover {
       border-bottom: 2px solid black;
     }
     cursor: pointer;
-    span svg{
+    span svg {
       width: 16px;
       height: 16px;
     }

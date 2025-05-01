@@ -43,7 +43,7 @@ export default function Buy() {
   }, []);
 
   //   setitem(itemTemp);
-  console.log("***", item);
+  // console.log("***", item);
   var settings = {
     dots: true,
     infinite: true,
@@ -66,16 +66,16 @@ export default function Buy() {
             {/* <img className="img-full" src={item.image} /> */}
             <Slider className="silder" {...settings}>
               <div className="buy-img">
-                <img className="img-full" src={item.image} />
+                <img className="img-full" src={item.image} alt="" />
               </div>
               <div className="buy-img">
-                <img className="img-full" src={item.image1} />
+                <img className="img-full" src={item.image1} alt="" />
               </div>
               <div className="buy-img">
-                <img className="img-full" src={item.image2} />
+                <img className="img-full" src={item.image2} alt=""/>
               </div>
               <div className="buy-img">
-                <img className="img-full" src={item.image3} />
+                <img className="img-full" src={item.image3} alt=""/>
               </div>
             </Slider>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroBanner from "./herobanner";
 import Discover from "./discover";
 import Gallery from "./gallery";
