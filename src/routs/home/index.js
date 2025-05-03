@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeroBanner from "./herobanner";
 import Discover from "./discover";
 import Gallery from "./gallery";
 
-export default function Home() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
+export default function Home({images}) {
+  // console.log("home****",images);
+  
   return (
     <div>
-      <HeroBanner />
-      <Discover />
-      <Gallery />
+      <HeroBanner images={images} />
+      <Discover images={images}  />
+      <Gallery images={images}  />
     </div>
   );
 }

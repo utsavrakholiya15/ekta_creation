@@ -4,10 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronRight } from "react-icons/fi";
 
-import heroImg1 from "../../../assets/IMAGEs/heroImg1.png";
-import heroImg2 from "../../../assets/IMAGEs/hero2.jpg";
-import heroImg3 from "../../../assets/IMAGEs/hero3.jpg";
-import heroImg4 from "../../../assets/IMAGEs/hero4.jpg";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 function SampleNextArrow(props) {
@@ -27,7 +23,7 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
-export default function HeroBanner() {
+export default function HeroBanner({images}) {
   const navigate = useNavigate();
   var settings = {
     dots: false,
@@ -43,12 +39,17 @@ export default function HeroBanner() {
     pauseOnHover: false,
     waitForAnimate: false,
   };
+  // console.log("hb****",images);
+  
   return (
     <div className="hb">
       <div className="hb-sliders">
         <Slider {...settings}>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg1} alt="" />
+            <img loading="lazy" className="img-full" 
+            // src={heroImg1}
+            src={images.hero1}
+             alt="" />
             <div className="hb-img-blur"></div>
             <div className="hb-img-data">
               <h4>ETHICAL AND BEAUTIFUL COLLECTION</h4>
@@ -60,13 +61,16 @@ export default function HeroBanner() {
             </div>
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg2} alt="" />
+            <img loading="lazy" className="img-full" 
+            // src={heroImg2}
+            src={images.hero2}
+             alt="" />
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg3} alt="" />
-          </div>
-          <div className="hb-img">
-            <img loading="lazy" className="img-full" src={heroImg4} alt="" />
+            <img loading="lazy" className="img-full" 
+            // src={heroImg3}
+            src={images.hero3}
+             alt="" />
           </div>
         </Slider>
       </div>

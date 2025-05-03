@@ -1,18 +1,5 @@
 @import "../../../scss/main.scss";
 
-// .whatsapp-icon{
-//     position: absolute;
-//     bottom: 7%;
-//     right: 2%;
-//     border: 2px solid black;
-//     padding: 8px;
-//     border-radius: 50%;
-
-//     svg{
-//         width: 35px;
-//         height: 35px;
-//     }
-// }
 footer {
   overflow: hidden;
   // border-top: 1px solid black;
@@ -24,20 +11,21 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
 .footer-logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  @media (max-width:768px) {
+  align-items: left;
+  @media (max-width: 768px) {
     margin-bottom: 15px;
   }
   .footer-logo-img {
     width: 75px;
     height: 75px;
+    margin-left: 20px;
   }
   .footer-logo-name {
     @include font1;
@@ -53,37 +41,39 @@ footer {
     }
   }
 }
-.footer-links{
+.footer-links {
   gap: 4px;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     gap: 3px;
   }
 }
-.footer-products{
+.footer-products {
   gap: 4px;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     gap: 3px;
   }
 }
 .footer-item {
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   h4 {
+    width: 100%;
     @include font1;
     font-size: 11px;
     font-weight: 300;
     letter-spacing: 4px;
     margin-bottom: 20px;
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       letter-spacing: 3px;
       margin-top: 10px;
       margin-bottom: 16px;
     }
   }
   p {
+    width: 100%;
     @include font1;
     font-size: 13px;
     font-weight: 300;
@@ -92,12 +82,12 @@ footer {
     align-items: center;
     gap: 6px;
     letter-spacing: 1.2px;
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       gap: 3px;
       font-size: 12px;
     }
     &:hover {
-      border-bottom: 2px solid black;
+      // border-bottom: 2px solid black;
     }
     cursor: pointer;
     span svg {
@@ -106,8 +96,8 @@ footer {
     }
   }
 }
-.footer-item-links{
-  a{
+.footer-item-links {
+  a {
     display: flex;
     align-items: center;
     gap: 8px;

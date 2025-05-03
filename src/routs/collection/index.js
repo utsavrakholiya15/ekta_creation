@@ -3,35 +3,38 @@ import React, { useEffect, useState } from "react";
 // import img1 from "../../utilities/data/images/coll1.jpg";
 import "./collection.scss";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-export default function Collection() {
+export default function Collection({collection}) {
+  
   const navigate = useNavigate();
   const [queryParams] = useSearchParams();
   const location = useLocation();
   //
   const [hovered, setHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [items, setitems] = useState([]);
+  const [items, setitems] = useState(collection||[]);
   //
 
   const category = queryParams.get("category");
   useEffect(() => {
-    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/caf3aaf190f624546d65f70bda9fd0bdfd875fc6/ec.json")
-      .then((res) => res.json()) // Parse JSON response
-      // .then((data) => setitems(data)) // Store it in state
-      .then((data) => {
-        if (category) {
-          const filtered = data.filter((el) => el.category === category);
-          setitems(filtered);
-        } else {
-          setitems(data);
-        }
-      })
-      .catch((err) => console.error("Error fetching data:", err));
+    // fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/caf3aaf190f624546d65f70bda9fd0bdfd875fc6/ec.json")
+    //   .then((res) => res.json()) // Parse JSON response
+    //   // .then((data) => setitems(data)) // Store it in state
+    //   .then((data) => {
+    //     if (category) {
+    //       const filtered = data.filter((el) => el.category === category);
+    //       setitems(filtered);
+    //     } else {
+    //       setitems(data);
+    //     }
+    //   })
+    //   .catch((err) => console.error("Error fetching data:", err));
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.search]);
 
   // console.log("items***",items);
+  // console.log("*****Coll",collection);
+  
   
 
   return (

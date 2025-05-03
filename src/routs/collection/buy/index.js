@@ -24,30 +24,22 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
-export default function Buy() {
+export default function Buy({ collection }) {
   const [queryParam] = useSearchParams();
   const id = queryParam.get("id");
-  //   const item = itemsCollection[id];
-  //     useEffect(()=>{
-  //         window.scrollTo(0, 0);
-  //     },[])
+
   const [item, setitem] = useState({});
 
   useEffect(() => {
-    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/caf3aaf190f624546d65f70bda9fd0bdfd875fc6/ec.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const found = data.find((item) => item.id === id);
-        setitem(found);
-      })
-      .catch((err) => console.error("Error fetching data:", err));
+    const found = collection.find((item) => item.id === id);
+    setitem(found);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  //   setitem(itemTemp);
   // console.log("***", item);
+  // console.log("this****",collection);
+
   var settings = {
-    
     dots: true,
     infinite: true,
     speed: 500,
@@ -75,10 +67,10 @@ export default function Buy() {
                 <img className="img-full" src={item.image2} alt="" />
               </div>
               <div className="buy-img">
-                <img className="img-full" src={item.image3} alt=""/>
+                <img className="img-full" src={item.image3} alt="" />
               </div>
               <div className="buy-img">
-                <img className="img-full" src={item.image4} alt=""/>
+                <img className="img-full" src={item.image4} alt="" />
               </div>
             </Slider>
           </div>
