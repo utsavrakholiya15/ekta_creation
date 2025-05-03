@@ -6,6 +6,10 @@
   color: black;
   /* font-family: "Questrial", sans-serif; */
 }
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+}
 .img-full{
   width: 100%;
   height: 100%;
