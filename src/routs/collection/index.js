@@ -3,15 +3,14 @@ import React, { useEffect, useState } from "react";
 // import img1 from "../../utilities/data/images/coll1.jpg";
 import "./collection.scss";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-export default function Collection({collection}) {
-  
+export default function Collection({ collection }) {
   const navigate = useNavigate();
   const [queryParams] = useSearchParams();
   const location = useLocation();
   //
   const [hovered, setHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [items, setitems] = useState(collection||[]);
+  const [items, setitems] = useState([]);
   //
 
   const category = queryParams.get("category");
@@ -28,14 +27,18 @@ export default function Collection({collection}) {
     //     }
     //   })
     //   .catch((err) => console.error("Error fetching data:", err));
+    if (category) {
+      const filtered = collection.filter((el) => el.category === category);
+      setitems(filtered);
+    } else {
+      setitems(collection);
+    }
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.search]);
 
   // console.log("items***",items);
   // console.log("*****Coll",collection);
-  
-  
 
   return (
     <div className="collection container">
