@@ -15,7 +15,7 @@ export default function Collection() {
 
   const category = queryParams.get("category");
   useEffect(() => {
-    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/05b58e8cf7211c003cb5952a24115ae361d6bf45/ec.json")
+    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/caf3aaf190f624546d65f70bda9fd0bdfd875fc6/ec.json")
       .then((res) => res.json()) // Parse JSON response
       // .then((data) => setitems(data)) // Store it in state
       .then((data) => {

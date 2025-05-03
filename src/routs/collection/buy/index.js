@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FiChevronRight } from "react-icons/fi";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -33,7 +34,7 @@ export default function Buy() {
   const [item, setitem] = useState({});
 
   useEffect(() => {
-    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/05b58e8cf7211c003cb5952a24115ae361d6bf45/ec.json")
+    fetch("https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/caf3aaf190f624546d65f70bda9fd0bdfd875fc6/ec.json")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((item) => item.id === id);
@@ -46,6 +47,7 @@ export default function Buy() {
   //   setitem(itemTemp);
   console.log("***", item);
   var settings = {
+    
     dots: true,
     infinite: true,
     speed: 500,
@@ -101,7 +103,7 @@ export default function Buy() {
             <div className="buy-details-buy">
               <a
                 href={`https://wa.me/+919274462615?text=${encodeURIComponent(
-                  `Image: ${item.image}\n\n\n\nHi, I'm interested in this saree:\n\nProduct: ${window.location.href}\n\nName: ${item.name}\nPrice: Rs.${item.price}\n`
+                  `Image: ${item.image1}\n\n\n\nHi, I'm interested in this saree:\n\nProduct: ${window.location.href}\n\nName: ${item.name}\nPrice: Rs.${item.price}\n`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
