@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./scss/main.scss";
+import { Analytics } from "@vercel/analytics/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React, { Suspense, useEffect, useState } from "react";
 import { Loader } from "./routs/common";
@@ -16,11 +17,10 @@ const Buy = React.lazy(() => import("./routs/collection/buy"));
 const About = React.lazy(() => import("./routs/about"));
 
 function App() {
-  
   const [appData, setappData] = useState(null);
   const [collData, setcollData] = useState(null);
   useEffect(() => {
-  // console.log("refetching in app js****");
+    // console.log("refetching in app js****");
 
     const fetchAppData = async () => {
       try {

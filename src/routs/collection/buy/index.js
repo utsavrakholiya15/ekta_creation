@@ -112,7 +112,7 @@ export default function Buy({ collection }) {
               <p>Saree Fabric : {item.saree_fabric}</p>
               <p>Blouse Fabric : {item.blouse}</p>
               <p>Pallu : {item.pallu}</p>
-              <p>Occasion : {item.occassion}</p>
+              <p>Occasion : {item.occasion}</p>
               <p>Pattern : {item.pattern}</p>
               <p>{"Net Quantity (N) : Single"}</p>
               <p>Sizes : Free Size</p>
