@@ -26,7 +26,7 @@ export default function Collection({ collection }) {
     //       setitems(data);
     //     }
     //   })
-    //   .catch((err) => console.error("Error fetching data:", err));
+    //   .catch((err) => console.error("Error fetching data:", err)); 
     if (category) {
       const filtered = collection.filter((el) => el.category === category);
       setitems(filtered);

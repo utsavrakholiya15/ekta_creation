@@ -36,7 +36,7 @@ export default function Buy({ collection }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  // console.log("***", item);
+  console.log("***", item);
   // console.log("this****",collection);
 
   var settings = {
@@ -108,12 +108,12 @@ export default function Buy({ collection }) {
             </div>
             <div className="buy-pDetails">
               <h3>Product Details</h3>
-              <p>Name : Value</p>
-              <p>Saree Fabric : Value</p>
-              <p>Blouse Fabric : Value</p>
-              <p>Pallu : Value</p>
-              <p>Occasion : Value</p>
-              <p>Pattern : Value</p>
+              <p>Name : {item.name}</p>
+              <p>Saree Fabric : {item.saree_fabric}</p>
+              <p>Blouse Fabric : {item.blouse}</p>
+              <p>Pallu : {item.pallu}</p>
+              <p>Occasion : {item.occassion}</p>
+              <p>Pattern : {item.pattern}</p>
               <p>{"Net Quantity (N) : Single"}</p>
               <p>Sizes : Free Size</p>
             </div>

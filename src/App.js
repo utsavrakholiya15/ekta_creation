@@ -36,7 +36,7 @@ function App() {
     const fetchCollData = async () => {
       try {
         const response = await fetch(
-          "https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/caf3aaf190f624546d65f70bda9fd0bdfd875fc6/ec.json"
+          "https://gist.githubusercontent.com/utsavrakholiya15/4d4dae2fe9d4cd0dae03bf56853770b3/raw/7f05718f65b24cec7c5b0ebb0c7e29f9b94168b8/ec.json"
         );
         const result = await response.json();
         setcollData(result);
