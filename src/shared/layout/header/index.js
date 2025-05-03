@@ -25,7 +25,7 @@ export default function Header() {
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(url, "_blank");
-    console.log("done");
+    // console.log("done");
   };
 
   return (

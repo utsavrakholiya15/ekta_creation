@@ -31,7 +31,7 @@ export default function Collection() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.search]);
 
-  console.log("items***",items);
+  // console.log("items***",items);
   
 
   return (

@@ -4,8 +4,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 import fLogo from "../../../assets/LOGOs/logo.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
   const handleWhatsAppClick = () => {
     const phoneNumber = "+919274462615"; // replace with your number
     const message = encodeURIComponent(
@@ -31,34 +33,86 @@ export default function Footer() {
         </div>
         <div className="footer-item footer-links">
           <h4>LINKS</h4>
-          <p>Home</p>
-          <p>Collection</p>
-          <p>About Us</p>
+          <p
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </p>
+          <p
+            onClick={() => {
+              navigate("/collection");
+            }}
+          >
+            Collection
+          </p>
+          <p
+            onClick={() => {
+              navigate("/about");
+            }}
+          >
+            About Us
+          </p>
         </div>
 
         <div className="footer-item footer-products">
           <h4>OUR PRODUCT</h4>
-          <p>Lycra</p>
-          <p>Rimzim</p>
-          <p>Chinon</p>
-          <p>Satin</p>
-          <p>Georgatte</p>
+          <p
+            onClick={() => {
+              navigate("/collection?category=lycra");
+            }}
+          >
+            Lycra
+          </p>
+          <p
+            onClick={() => {
+              navigate("/collection?category=rimzim");
+            }}
+          >
+            Rimzim
+          </p>
+          <p
+            onClick={() => {
+              navigate("/collection?category=chinon");
+            }}
+          >
+            Chinon
+          </p>
+          <p
+            onClick={() => {
+              navigate("/collection?category=satin");
+            }}
+          >
+            Satin
+          </p>
+          <p
+            onClick={() => {
+              navigate("/collection?category=georgette");
+            }}
+          >
+            Georgatte
+          </p>
         </div>
         <div className="footer-item">
           <h4>CONTACT US</h4>
-          <p href="tel:+919274462615">
-            <span>
-              <MdOutlinePhone />
-            </span>
-            +918849772129
+          <p className="footer-item-links">
+            <a href="tel:+919274462615">
+              <span>
+                <MdOutlinePhone />
+              </span>
+              +918849772129
+            </a>
           </p>
-          <p>
-            <span>
-              <MdOutlineMail />
-            </span>
-            ektacreation@gmail.com
+          <p className="footer-item-links">
+            <a href="ektaa.creation01@gmail.com">
+              <span>
+                <MdOutlineMail />
+              </span>
+              ektaa.creation01@gmail.com
+            </a>
           </p>
-          <p>
+          <p className="footer-item-links">
             <span>
               <FaWhatsapp />
             </span>

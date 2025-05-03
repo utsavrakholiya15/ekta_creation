@@ -9,6 +9,7 @@ import heroImg2 from "../../../assets/IMAGEs/hero2.jpg";
 import heroImg3 from "../../../assets/IMAGEs/hero3.jpg";
 import heroImg4 from "../../../assets/IMAGEs/hero4.jpg";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -27,6 +28,7 @@ function SamplePrevArrow(props) {
   );
 }
 export default function HeroBanner() {
+  const navigate = useNavigate();
   var settings = {
     dots: false,
     infinite: true,
@@ -42,7 +44,7 @@ export default function HeroBanner() {
     waitForAnimate: false,
   };
   return (
-    <div className="hb ">
+    <div className="hb">
       <div className="hb-sliders">
         <Slider {...settings}>
           <div className="hb-img">

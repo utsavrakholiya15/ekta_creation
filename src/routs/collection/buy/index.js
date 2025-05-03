@@ -45,7 +45,7 @@ export default function Buy() {
   }, []);
 
   //   setitem(itemTemp);
-  console.log("***", item);
+  // console.log("***", item);
   var settings = {
     
     dots: true,

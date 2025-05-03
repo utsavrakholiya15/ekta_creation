@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.scss";
 import { Loader } from "../common";
 export default function About() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="about container-big">
       <div className="about-title">
