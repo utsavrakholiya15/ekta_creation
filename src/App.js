@@ -104,6 +104,7 @@ function App() {
     // </div>
     <div>
       <RouterProvider router={router} />
+      <Analytics />
     </div>
   );
 }
