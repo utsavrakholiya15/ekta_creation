@@ -23,7 +23,7 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
-export default function HeroBanner({images}) {
+export default function HeroBanner({ images }) {
   const navigate = useNavigate();
   var settings = {
     dots: false,
@@ -40,18 +40,21 @@ export default function HeroBanner({images}) {
     waitForAnimate: false,
   };
   // console.log("hb****",images);
-  
+
   return (
     <div className="hb">
       <div className="hb-sliders">
         <Slider {...settings}>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" 
-            // src={heroImg1}
-            src={images.hero1}
-             alt="" />
+            <img
+              loading="lazy"
+              className="img-full"
+              // src={heroImg1}
+              src={images.hero1}
+              alt=""
+            />
             <div className="hb-img-blur"></div>
-            <div className="hb-img-data">
+            <div className="hb-img-data-first">
               <h4>ETHICAL AND BEAUTIFUL COLLECTION</h4>
               <p>
                 a saree is not just a garment, it's a language of grace,
@@ -61,16 +64,43 @@ export default function HeroBanner({images}) {
             </div>
           </div>
           <div className="hb-img">
-            <img loading="lazy" className="img-full" 
-            // src={heroImg2}
-            src={images.hero2}
-             alt="" />
+            <img
+              loading="lazy"
+              className="img-full"
+              // src={heroImg2}
+              src={images.hero2}
+              alt=""
+            />
+            <div className="hb-img-blur"></div>
+            <div className="hb-data-second-parent">
+              <div className="hb-data-second">
+                <h4>PARTY WEAR COLLECTION</h4>
+                <div className="hb-data-second-logo">
+                  <h2>
+                    BY EKTA <span>CREATION</span>
+                  </h2>
+                </div>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
           </div>
+
           <div className="hb-img">
-            <img loading="lazy" className="img-full" 
-            // src={heroImg3}
-            src={images.hero3}
-             alt="" />
+            <img
+              loading="lazy"
+              className="img-full"
+              // src={heroImg3}
+              src={images.hero3}
+              alt=""
+            />
+            <div className="hb-img-blur"></div>
+            <div className="hb-img-data-third">
+              <h4>SAREES</h4>
+              <p>
+              a saree is elegance, tradition, and pride — woven together in six yards of timeless beauty.
+              </p>
+              <button>EXPLORE</button>
+            </div>
           </div>
         </Slider>
       </div>

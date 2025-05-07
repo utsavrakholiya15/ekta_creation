@@ -13,6 +13,7 @@
   @include font1;
 }
 .buy-details-name {
+  margin-bottom: 40px;
   p {
     font-size: 25px;
     letter-spacing: 1px;
@@ -33,7 +34,7 @@
     margin-bottom: 35px;
   }
   p {
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 16px;
     color: rgba(128, 128, 128, 0.848) 000;
     @media (max-width: 576px) {

@@ -129,8 +129,11 @@ export default function Collection({ collection }) {
                   </div>
                   <div className="collection-item-data">
                     <p>{el.name}</p>
+                    <span style={{display:"block",textDecoration:"line-through"}}>Rs.{el.base_price}</span>
                     <span>Rs.{el.price}</span>
                   </div>
+                  {el.best_seller?<div className="bestSeller">BEST SELLER</div>:null}
+                  
                 </div>
               );
             })
@@ -139,89 +142,6 @@ export default function Collection({ collection }) {
               <span className="loader"></span>
             </div>
           )}
-          {/* -- */}
-          {/* <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={itemsCollection[0].img} />
-            </div>
-            <div className="collection-item-data">
-              <p>{itemsCollection[0].name}</p>
-              <span>Rs.{itemsCollection[0].price}</span>
-            </div>
-          </div> */}
-          {/* -- */}
-          {/* <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={itemsCollection[0].img} />
-            </div>
-            <div className="collection-item-data">
-              <p>{itemsCollection[0].name}</p>
-              <span>Rs.{itemsCollection[0].price}</span>
-            </div>
-          </div> */}
-          {/* <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div>
-          <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div>
-          <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div>
-          <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div>
-          <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div>
-          <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div>
-          <div className="collection-item">
-            <div className="collection-item-img">
-              <img className="img-full" src={img1} />
-            </div>
-            <div className="collection-item-data">
-              <p>Special Design Women Saree Zimmy Choo</p>
-              <span>Rs.20000</span>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

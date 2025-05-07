@@ -79,6 +79,7 @@ export default function Buy({ collection }) {
               <p>{item.name}</p>
             </div>
             <div className="buy-details-price">
+              <p style={{fontSize:"13px",textDecoration:"line-through"}}>Rs.{item.base_price}</p>
               <p>Rs.{item.price}</p>
               <span>Tax included. Shipping calculated at checkout.</span>
             </div>

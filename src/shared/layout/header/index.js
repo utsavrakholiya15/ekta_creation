@@ -99,11 +99,11 @@ export default function Header() {
           </div>
         )}
         <div className="flex-left">
-          <div className="header-title">
-            <h2>
-              EKTA <span>CREATION</span>
-            </h2>
-          </div>
+            <div className="header-title">
+              <h2>
+                EKTA <span>CREATION</span>
+              </h2>
+            </div>
           <div className="header-icons">
             <a href="tel:+919274462615">
               <MdOutlinePhone className="phone header-icon" />
