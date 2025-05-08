@@ -60,7 +60,7 @@ export default function HeroBanner({ images }) {
                 a saree is not just a garment, it's a language of grace,
                 elegance, and timeless tradition
               </p>
-              <button>EXPLORE</button>
+              <button onClick={()=>{navigate("/collection")}}>EXPLORE</button>
             </div>
           </div>
           <div className="hb-img">
@@ -80,7 +80,7 @@ export default function HeroBanner({ images }) {
                     BY EKTA <span>CREATION</span>
                   </h2>
                 </div>
-                <button>SHOP NOW</button>
+                <button onClick={()=>{navigate("/collection")}}>SHOP NOW</button>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function HeroBanner({ images }) {
               <p>
               a saree is elegance, tradition, and pride — woven together in six yards of timeless beauty.
               </p>
-              <button>EXPLORE</button>
+              <button onClick={()=>{navigate("/collection")}}>EXPLORE</button>
             </div>
           </div>
         </Slider>

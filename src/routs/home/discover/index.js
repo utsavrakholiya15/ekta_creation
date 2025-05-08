@@ -6,8 +6,8 @@ export default function Discover({ images }) {
   return (
     <div className="dis container-45">
       <div className="dis-title">
-        <p>"I never want to be a moment in fashion"</p>
-        <p>Rahul Mishra</p>
+        <p>"Grace in six yards, strength in every fold"</p>
+        <p>Indian Traditions</p>
       </div>
       <div className="dis-grid">
         <div className="dis-item">
