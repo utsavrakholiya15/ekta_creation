@@ -103,6 +103,7 @@ export default function Header() {
               <h2>
                 EKTA <span>CREATION</span>
               </h2>
+              <div className="header-title-thought">where creativity meets quality fabrics</div>
             </div>
           <div className="header-icons">
             <a href="tel:+919274462615">
