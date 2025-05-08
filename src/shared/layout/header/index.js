@@ -33,7 +33,7 @@ export default function Header() {
       <div className="header-marquee">
         <Marquee speed={60} autoFill={true}>
           <div className="header-marquee-item">
-            <p>FREE SHIPPING | PAN INDIA | NO COD</p>
+            <p>PAN INDIA | NO COD | QUALITY PRODUCTS</p>
           </div>
         </Marquee>
       </div>
