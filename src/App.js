@@ -48,7 +48,7 @@ function App() {
     fetchAppData();
     fetchCollData();
   }, []);
-  // console.log(appData, collData);
+  console.log(appData, collData);
 
   if (!appData || !collData) {
     return <Loader />;
@@ -89,7 +89,7 @@ function App() {
           path: "/about",
           element: (
             <Suspense fallback={<Loader />}>
-              <About />
+              <About images={appData.home} />
             </Suspense>
           ),
         },

@@ -1,6 +1,8 @@
 import React from "react";
 import "./discover.scss";
+import { useNavigate } from "react-router-dom";
 export default function Discover({ images }) {
+  const navigate = useNavigate();
   // console.log(images);
 
   return (
@@ -19,9 +21,9 @@ export default function Discover({ images }) {
           />
           <div className="black-blur"></div>
           <div className="dis-item-data">
-            <p>SPRING SUMMER 2025</p>
-            <h4>PARIS HAUTE COUTURE WEEK</h4>
-            <button>DISCOVER</button>
+            <p>Drape Your Story</p>
+            <h4>Celebrate Grace Every Day</h4>
+            <button  onClick={()=>{navigate("/collection")}}>DISCOVER</button>
           </div>
         </div>
         <div className="dis-item">
@@ -33,9 +35,9 @@ export default function Discover({ images }) {
           />
           <div className="black-blur"></div>
           <div className="dis-item-data">
-            <p>SPRING SUMMER 2025</p>
-            <h4>PARIS HAUTE COUTURE WEEK</h4>
-            <button>DISCOVER</button>
+            <p>Style Meets Heritage</p>
+            <h4>Timeless Sarees, Modern You</h4>
+            <button  onClick={()=>{navigate("/collection")}}>DISCOVER</button>
           </div>
         </div>
       </div>

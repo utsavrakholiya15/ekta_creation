@@ -3,7 +3,7 @@
 footer {
   overflow: hidden;
   // border-top: 1px solid black;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .footer {
   width: 100%;
@@ -26,6 +26,10 @@ footer {
     width: 75px;
     height: 75px;
     margin-left: 20px;
+    @media (max-width: 768px) {
+      width: 65px;
+      height: 65px;
+    }
   }
   .footer-logo-name {
     @include font1;

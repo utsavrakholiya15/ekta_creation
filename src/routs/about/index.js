@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
 import "./about.scss";
 import { Loader } from "../common";
-export default function About() {
+import Gallery from "../home/gallery";
+export default function About({images}) {
+  console.log("gall",images);
+  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
     <div className="about container-big">
       <div className="about-title">
-        <h2>About Us</h2>
+        {/* <h2>About Us</h2> */}
       </div>
-      <div className="about-data">
+      <Gallery images={images} />
+      {/* <div className="about-data">
         <p>
           At Ekta Creation, we believe that a saree is more than just
           traditional attire—it's a symbol of grace, heritage, and identity. Our
@@ -86,7 +90,7 @@ export default function About() {
           your next favorite saree. Let’s keep the drape of tradition alive,
           together.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
