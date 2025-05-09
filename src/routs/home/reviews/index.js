@@ -19,7 +19,7 @@ const Star = () => {
 };
 export default function Reviews() {
   return (
-    <div className="reviews container">
+    <div className="reviews container-45">
       <div className="reviews-title">
         <h3>Reviews</h3>
       </div>
