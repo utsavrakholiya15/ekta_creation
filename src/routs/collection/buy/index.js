@@ -96,7 +96,7 @@ export default function Buy({ collection }) {
             <div className="buy-details-buy">
               <a
                 href={`https://wa.me/+919274462615?text=${encodeURIComponent(
-                  `Image: ${item.image1}\n\n\n\nHi, I'm interested in this saree:\n\nProduct: ${window.location.href}\n\nName: ${item.name}\nPrice: Rs.${item.price}\n`
+                  `\nHi, I'm interested in this saree:\n\nProduct: ${window.location.href}\n\nName: ${item.name}\nPrice: Rs.${item.price}\n`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
