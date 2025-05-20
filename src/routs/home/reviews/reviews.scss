@@ -1,4 +1,9 @@
 @import "../../../scss/main.scss";
+.reviews{
+  @media (max-width:576px) {
+    padding: 0 15px !important;
+  }
+}
 .reviews-title {
   padding-bottom: 60px;
   @media (max-width: 768px) {
