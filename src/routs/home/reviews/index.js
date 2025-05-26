@@ -24,7 +24,7 @@ export default function Reviews() {
         <h3>Reviews</h3>
       </div>
       <div>
-        <Marquee speed={60} autoFill={true}>
+        <Marquee pauseOnHover={true} speed={30} autoFill={true}>
           <div className="reviews-item">
             <div className="reviews-item-text">
               <p>
