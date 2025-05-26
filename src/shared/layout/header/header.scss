@@ -6,6 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: end;
+  @media (max-width:576px) {
+    height: 85px;
+  }
 }
 .flex-left {
   min-width: 60.5%;

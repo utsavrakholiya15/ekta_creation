@@ -14,6 +14,9 @@
 }
 .buy-details-name {
   margin-bottom: 40px;
+  @media (max-width:576px) {
+    margin-bottom: 20px;
+  }
   p {
     font-size: 25px;
     letter-spacing: 1px;
@@ -38,7 +41,7 @@
     font-size: 16px;
     color: rgba(128, 128, 128, 0.848) 000;
     @media (max-width: 576px) {
-      margin-top: 35px;
+      margin-top: 24px;
     }
   }
   span {
@@ -71,6 +74,9 @@
 .buy-details-buy {
   margin-top: 28px;
   display: inline-block;
+  @media (max-width:576px) {
+    margin-top: 18px;
+  }
   button {
     display: flex;
     align-items: center;
